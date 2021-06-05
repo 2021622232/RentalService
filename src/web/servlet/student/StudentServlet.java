@@ -10,7 +10,7 @@ import java.io.IOException;
 @WebServlet("/studentServlet")
 public class StudentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/student/sIndex.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/student/sFindTeacherList.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -2,7 +2,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>查询教师</title>
+    <title>项目列表</title>
     <link rel="stylesheet" href="./css/layui.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./layui.js"></script>
@@ -18,30 +18,23 @@
         <div style="padding: 15px;">
                 <span class="layui-breadcrumb">
                     <a href="">管理员</a>
-                    <a href="">教师管理</a>
-                    <a><cite>查询教师</cite></a>
+                    <a href="">项目管理</a>
+                    <a><cite>项目列表</cite></a>
                 </span>
             <table class="layui-table" lay-filter="test">
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>工号</th>
-                    <th>姓名</th>
-                    <th>性别</th>
-                    <th>文化程度</th>
-                    <th>职称</th>
-                    <th>操作</th>
+                    <th>项目名称</th>
+                    <th>项目内容</th>
                 </tr>
                 </thead>
 
-                <c:forEach items="${teachers}" var="teacher" varStatus="t">
+                <c:forEach items="" var="teacher" varStatus="t">
                     <tr>
                         <td>${t.count}</td>
                         <td>${teacher.t_id}</td>
                         <td>${teacher.t_name}</td>
-                        <td>${teacher.t_sex}</td>
-                        <td>${teacher.t_education}</td>
-                        <td>${teacher.t_title}</td>
                         <td><a class="layui-btn layui-btn-normal"
                                href="${pageContext.request.contextPath}/updateTeacherServlet?tid=${teacher.t_id}">修改</a>
                             <a class="layui-btn layui-btn-danger"
